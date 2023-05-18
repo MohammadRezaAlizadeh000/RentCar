@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/dialog_background_shape"
+    android:paddingBottom="@dimen/margin8"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        android:layout_marginHorizontal="@dimen/margin8"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/datePicker"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/horizontalBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="datePicker,timePicker" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/okBtn"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="@dimen/margin8"
+        android:text="@string/ok"
+        android:layout_marginStart="@dimen/margin8"
+
+        app:layout_constraintTop_toTopOf="@+id/horizontalBarrier"
+        app:layout_constraintEnd_toStartOf="@id/cancelBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelBtn"
+
+        android:background="@drawable/back_background_btn"
+        android:textColor="@color/white"
+
+        android:text="@string/cancel"
+        android:layout_marginStart="@dimen/margin8"
+        android:layout_marginEnd="@dimen/margin8"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/okBtn"
+        app:layout_constraintTop_toTopOf="@id/okBtn"
+        app:layout_constraintBottom_toBottomOf="@id/okBtn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

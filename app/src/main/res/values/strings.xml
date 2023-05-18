@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RentCarApp</string>
+    <string name="logout">LOG OUT</string>
+    <string name="login">LOGIN</string>
+    <string name="footerText">Copyright@LoremIpsum</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="booking">BOOKING</string>
+    <string name="bookingInformation">BOOKING INFORMATION</string>
+    <string name="startDateLabel">Start Date-Time</string>
+    <string name="endDateLabel">End Date-Time:</string>
+    <string name="back">BACK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="ok">OK</string>
+    <string name="viewCar">VIEW CAR</string>
+    <string name="fieldEmpty">Please fill this field first</string>
+    <string name="successBooking">Your car have been booked successfully</string>
+
+    <string name="carMakeLabel">Make: </string>
+    <string name="carModelLabel">Model: </string>
+    <string name="carYearLabel">Year: </string>
+    <string name="carLocationLabel">Location: </string>
+    <string name="carPriceLabel">Price: </string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/bookingCarFragment"
+        android:name="com.mra.rentcar.presenter.view.fragment.BookingCarFragment"
+        android:label="BookingCarFragment"
+        tools:layout="@layout/booking_fragment" >
+        <action
+            android:id="@+id/action_bookingCarFragment_to_dateTimePickerDialog"
+            app:destination="@id/dateTimePickerDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mra.rentcar.presenter.view.fragment.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_carsListFragment"
+            app:destination="@id/carsListFragment"
+
+            app:popUpToInclusive="true"
+
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/carsListFragment"
+        android:name="com.mra.rentcar.presenter.view.fragment.CarsListFragment"
+        android:label="CarsListFragment"
+        tools:layout="@layout/cars_fragment">
+        <action
+            android:id="@+id/action_carsListFragment_to_bookingCarFragment"
+            app:destination="@id/bookingCarFragment"
+
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/mainMenuBottomSheetFragment"
+        android:name="com.mra.rentcar.presenter.view.fragment.MainMenuBottomSheetFragment"
+        tools:layout="@layout/main_menu_bottom_sheet_fragment"
+        android:label="MainMenuBottomSheetFragment" />
+
+
+    <action
+        android:id="@+id/open_main_menu_bottom_sheet"
+        app:destination="@id/mainMenuBottomSheetFragment" />
+
+    <dialog
+        android:id="@+id/dateTimePickerDialog"
+        android:name="com.mra.rentcar.presenter.view.fragment.DateTimePickerDialog"
+        tools:layout="@layout/date_time_picker_dialog"
+        android:label="DateTimePickerDialog" />
+
+</navigation>

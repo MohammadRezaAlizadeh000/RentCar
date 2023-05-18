@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="@dimen/corner10"
+
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+
+    android:layout_marginVertical="@dimen/margin12"
+    android:layout_marginHorizontal="@dimen/margin8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin8">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carImageCardView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/corner10"
+
+            app:layout_constraintEnd_toEndOf="@id/horizontalCenterGuideline"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/carImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:scaleType="centerCrop"
+
+
+                tools:src="@tools:sample/avatars" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalCenterGuideline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/detailLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+
+            android:layout_marginHorizontal="@dimen/margin12"
+            android:orientation="vertical"
+
+            app:layout_constraintStart_toStartOf="@id/horizontalCenterGuideline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/carImageCardView">
+
+            <TextView
+                android:id="@+id/make"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/model"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!--<androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewCarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/margin12"
+            android:background="@drawable/btn_background"
+
+            android:paddingHorizontal="@dimen/margin30"
+
+            android:text="@string/viewCar"
+
+            android:textColor="@color/white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/horizontalCenterGuideline"
+            app:layout_constraintTop_toBottomOf="@id/detailLayout" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
